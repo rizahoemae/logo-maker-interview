@@ -4,7 +4,7 @@
   <div
     class="p-16 space-y-3 flex flex-col w-full items-center min-h-screen border border-red-800"
   >
-    <!-- <h1 class="text-3xl font-bold underline">{{ separatedText }}</h1> -->
+    <!-- <h1 class="text-purple-300 font-bold underline">chuakzzz</h1> -->
     <draggable
       v-model="separatedText"
       class="space-x-2 flex h-32 w-1/2 border justify-center items-center"
@@ -15,7 +15,7 @@
       <template #item="{ element }">
         <span
           class="w-auto cursor-grabbing font-bold"
-          :class="'text-' + fontColor"
+          :class="`text-${fontColor}-300`"
           :style="{ 'font-size': fontSize + 'px' }"
           >{{ element }}</span
         >
@@ -48,21 +48,31 @@
     <div class="flex space-x-4">
       <button
         @click="changeFontColor('red')"
+        :class="{ 'outline-none ring ring-red-200': fontColor == 'red' }"
         class="w-10 h-10 rounded bg-red-300 focus:outline-none focus:ring focus:ring-red-200"
       />
       <button
         @click="changeFontColor('green')"
+        :class="{ 'outline-none ring ring-green-200': fontColor == 'green' }"
         class="w-10 h-10 rounded bg-green-300 focus:outline-none focus:ring focus:ring-green-200"
       />
       <button
         @click="changeFontColor('purple')"
+        :class="{ 'outline-none ring ring-purple-200': fontColor == 'purple' }"
         class="w-10 h-10 rounded bg-purple-300 focus:outline-none focus:ring focus:ring-purple-200"
       />
       <button
         @click="changeFontColor('blue')"
+        :class="{ 'outline-none ring ring-blue-200': fontColor == 'blue' }"
         class="w-10 h-10 rounded bg-blue-300 focus:outline-none focus:ring focus:ring-blue-200"
       />
     </div>
+    <button
+      type="button"
+      class="px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    >
+      Download
+    </button>
   </div>
 </template>
 <script>
@@ -77,7 +87,7 @@ export default {
       input: "Humaida",
       separatedText: [],
       fontSize: "52",
-      fontColor: "red-300",
+      fontColor: "red",
       drag: false,
       positions: {
         clientX: undefined,
@@ -95,8 +105,8 @@ export default {
       this.fontSize = e.target.value;
     },
     changeFontColor(val) {
-      this.fontColor = val + "-300";
-			console.log(this.fontColor)
+      this.fontColor = val;
+      console.log(this.fontColor);
     },
     // dragMouseDown(e) {
     //   e.preventDefault();

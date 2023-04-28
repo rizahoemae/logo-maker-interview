@@ -9,8 +9,9 @@
   },
   "dependencies": {
     "flowbite": "^1.6.5",
-    "html2canvas": "^1.4.1",
+    "regenerator-runtime": "^0.13.11",
     "vue": "^3.2.47",
+    "vue-html2canvas": "^0.0.4",
     "vuedraggable": "^4.1.0"
   },
   "devDependencies": {

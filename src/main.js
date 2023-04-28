@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import "./style.css"
-import draggable from 'vuedraggable'
+import VueHtml2Canvas from 'vue-html2canvas';
 
 const app = createApp(App)
 
-app.mount('#app')
+app.use(VueHtml2Canvas).mount('#app')

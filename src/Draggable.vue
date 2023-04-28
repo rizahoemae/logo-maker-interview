@@ -4,7 +4,7 @@
   <div
     class="p-16 space-y-3 flex flex-col w-full items-center min-h-screen border border-red-800"
   >
-    <p class="text-green-300">Draggable letter, <span class="text-blue-300">try now!</span></p>
+    <p>hahah</p>
     <div class="w-1/2" ref="printThis">
       <draggable
         v-model="separatedText"
@@ -91,7 +91,7 @@ export default {
   },
   data() {
     return {
-      input: "Sebuah Logo",
+      input: "Humaida",
       separatedText: [],
       fontSize: "52",
       fontColor: "text-red-300",
@@ -106,7 +106,7 @@ export default {
     },
     changeFontColor(val) {
       this.fontColor = `text-${val}-300`;
-      console.log(this.fontColor);
+      console.log(this.fontColor, "hahah");
     },
     async downloadLogo() {
       const el = this.$refs.printThis;

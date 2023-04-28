@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import "./style.css"
+import "./app.css"
 import VueHtml2Canvas from 'vue-html2canvas';
 
 const app = createApp(App)
